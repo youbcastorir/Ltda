@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BrandForge AI — Instantly generate company names, slogans, logos, color palettes, LinkedIn bios, SEO descriptions, and landing pages for your startup." />
+  <meta name="keywords" content="AI branding, startup naming, logo generator, brand colors, LinkedIn bio generator, SEO description, landing page generator" />
+  <meta name="author" content="BrandForge AI" />
+  <meta property="og:title" content="BrandForge AI — AI-Powered Startup Branding" />
+  <meta property="og:description" content="Generate your entire startup brand identity in minutes with AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brandforge.ai" />
+  <title>BrandForge AI — AI-Powered Startup Branding</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-icon">⬡</span>
+        BrandForge <span class="logo-accent">AI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#tools">Tools</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon">☀</span>
+        </button>
+        <a href="#tools" class="btn btn-primary">Start Free</a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#tools">Tools</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        AI-Powered Brand Studio
+      </div>
+      <h1 class="hero-title">
+        Build Your Startup Brand<br />
+        <span class="gradient-text">In Minutes, Not Months</span>
+      </h1>
+      <p class="hero-sub">
+        Generate names, slogans, logos, color palettes, LinkedIn bios, SEO copy,
+        and landing pages — all powered by AI, all in one place.
+      </p>
+      <div class="hero-actions">
+        <a href="#tools" class="btn btn-primary btn-lg">Launch Brand Studio</a>
+        <a href="#how" class="btn btn-ghost btn-lg">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>7</strong><span>Brand Tools</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Free to Use</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>&lt;3s</strong><span>Generation Time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS SECTION -->
+  <section class="tools-section" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Brand Studio</span>
+        <h2>Everything You Need to Launch</h2>
+        <p>Describe your startup once. Generate your entire brand identity.</p>
+      </div>
+
+      <!-- BRAND INPUT PANEL -->
+      <div class="brand-input-panel glass">
+        <div class="panel-header">
+          <h3>🚀 Describe Your Startup</h3>
+          <p>Fill in the details below to power all 7 brand tools</p>
+        </div>
+        <div class="input-grid">
+          <div class="input-group">
+            <label for="industryInput">Industry / Niche</label>
+            <input type="text" id="industryInput" placeholder="e.g. SaaS, FinTech, HealthTech, E-commerce…" />
+          </div>
+          <div class="input-group">
+            <label for="audienceInput">Target Audience</label>
+            <input type="text" id="audienceInput" placeholder="e.g. Small businesses, developers, freelancers…" />
+          </div>
+          <div class="input-group full-width">
+            <label for="descInput">What does your startup do? <span class="char-count" id="charCount">0/200</span></label>
+            <textarea id="descInput" maxlength="200" rows="3" placeholder="e.g. We help small businesses automate their social media marketing using AI…"></textarea>
+          </div>
+          <div class="input-group">
+            <label for="toneInput">Brand Tone</label>
+            <select id="toneInput">
+              <option value="professional">Professional</option>
+              <option value="friendly">Friendly & Approachable</option>
+              <option value="bold">Bold & Disruptive</option>
+              <option value="minimal">Clean & Minimal</option>
+              <option value="playful">Playful & Fun</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="keywordsInput">Keywords (optional)</label>
+            <input type="text" id="keywordsInput" placeholder="e.g. smart, fast, scale, connect…" />
+          </div>
+        </div>
+      </div>
+
+      <!-- TOOL CARDS GRID -->
+      <div class="tools-grid" id="toolsGrid">
+
+        <!-- 1. Name Generator -->
+        <div class="tool-card glass" data-tool="names">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#6ee7b7">🏷️</div>
+            <div>
+              <h3>Company Name Generator</h3>
+              <p>AI-crafted startup names that stand out</p>
+            </div>
+          </div>
+          <button class="btn btn-tool" data-action="names">Generate Names</button>
+          <div class="tool-result" id="result-names"></div>
+        </div>
+
+        <!-- 2. Slogan Generator -->
+        <div class="tool-card glass" data-tool="slogans">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#93c5fd">💬</div>
+            <div>
+              <h3>Slogan Generator</h3>
+              <p>Punchy taglines that stick in minds</p>
+            </div>
+          </div>
+          <button class="btn btn-tool" data-action="slogans">Generate Slogans</button>
+          <div class="tool-result" id="result-slogans"></div>
+        </div>
+
+        <!-- 3. Logo Creator -->
+        <div class="tool-card glass" data-tool="logo">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#fbbf24">🎨</div>
+            <div>
+              <h3>AI Logo Creator</h3>
+              <p>SVG logo concept generated instantly</p>
+            </div>
+          </div>
+          <button class="btn btn-tool" data-action="logo">Create Logo</button>
+          <div class="tool-result" id="result-logo"></div>
+        </div>
+
+        <!-- 4. Color Palette -->
+        <div class="tool-card glass" data-tool="colors">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#f9a8d4">🎭</div>
+            <div>
+              <h3>Color Palette Generator</h3>
+              <p>Brand-aligned color systems with hex codes</p>
+            </div>
+          </div>
+          <button class="btn btn-tool" data-action="colors">Generate Palette</button>
+          <div class="tool-result" id="result-colors"></div>
+        </div>
+
+        <!-- 5. LinkedIn Description -->
+        <div class="tool-card glass" data-tool="linkedin">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#60a5fa">💼</div>
+            <div>
+              <h3>LinkedIn Company Bio</h3>
+              <p>Professional profile that attracts talent & investors</p>
+            </div>
+          </div>
+          <button class="btn btn-tool" data-action="linkedin">Write LinkedIn Bio</button>
+          <div class="tool-result" id="result-linkedin"></div>
+        </div>
+
+        <!-- 6. SEO Description -->
+        <div class="tool-card glass" data-tool="seo">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#a78bfa">🔍</div>
+            <div>
+              <h3>SEO Meta Description</h3>
+              <p>Search-optimized copy that ranks and converts</p>
+            </div>
+          </div>
+          <button class="btn btn-tool" data-action="seo">Generate SEO Copy</button>
+          <div class="tool-result" id="result-seo"></div>
+        </div>
+
+        <!-- 7. Landing Page -->
+        <div class="tool-card glass tool-card-wide" data-tool="landing">
+          <div class="tool-card-header">
+            <div class="tool-icon" style="--icon-color:#34d399">🚀</div>
+            <div>
+              <h3>Startup Landing Page</h3>
+              <p>Full HTML landing page — download and deploy instantly</p>
+            </div>
+          </div>
+          <button class="btn btn-tool btn-primary" data-action="landing">Build Landing Page</button>
+          <div class="tool-result" id="result-landing"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Process</span>
+        <h2>Three Steps to Your Brand</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card glass">
+          <div class="step-num">01</div>
+          <h3>Describe</h3>
+          <p>Tell us about your startup — industry, audience, and what you do in a few sentences.</p>
+        </div>
+        <div class="step-card glass">
+          <div class="step-num">02</div>
+          <h3>Generate</h3>
+          <p>Our AI analyzes your input and generates tailored brand assets in under 3 seconds.</p>
+        </div>
+        <div class="step-card glass">
+          <div class="step-num">03</div>
+          <h3>Launch</h3>
+          <p>Copy your results, download your landing page HTML, and ship your startup today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item glass">
+          <button class="faq-q">Is BrandForge AI free?<span>+</span></button>
+          <div class="faq-a">Yes — completely free. All tools run on a shared API key with optimized token usage to keep costs minimal.</div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-q">Can I use results commercially?<span>+</span></button>
+          <div class="faq-a">Yes. All generated content is yours to use however you'd like, including for commercial projects.</div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-q">How does the logo creator work?<span>+</span></button>
+          <div class="faq-a">The logo creator generates unique SVG-based logo concepts using your brand name, colors, and tone. You can download the SVG or copy the code.</div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-q">Are results cached?<span>+</span></button>
+          <div class="faq-a">Yes — results are cached in your browser's localStorage so you don't need to re-generate them on every visit.</div>
+        </div>
+        <div class="faq-item glass">
+          <button class="faq-q">Do I need an account?<span>+</span></button>
+          <div class="faq-a">No account required. Just open the site, describe your startup, and start generating.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">⬡</span>
+          BrandForge <span class="logo-accent">AI</span>
+        </a>
+        <p>AI-powered startup branding platform.<br />Build your brand identity in minutes.</p>
+        <a href="mailto:salatrir@gmail.com" class="footer-email">salatrir@gmail.com</a>
+      </div>
+      <div class="footer-links">
+        <h4>Tools</h4>
+        <a href="#tools">Name Generator</a>
+        <a href="#tools">Slogan Generator</a>
+        <a href="#tools">Logo Creator</a>
+        <a href="#tools">Color Palette</a>
+        <a href="#tools">LinkedIn Bio</a>
+        <a href="#tools">SEO Description</a>
+        <a href="#tools">Landing Page</a>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <a href="README.md" target="_blank">README</a>
+        <a href="sitemap.xml" target="_blank">Sitemap</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 BrandForge AI. Built for founders, by founders.</p>
+      <p>Contact: <a href="mailto:salatrir@gmail.com">salatrir@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
